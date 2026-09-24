@@ -1,0 +1,13 @@
+{
+  "name": "tutor",
+  "description": "Tutor adaptativo para estudiar cualquier tema: diagnostica antes de explicar, corrige sin regalar respuestas y recuerda tu progreso entre sesiones.",
+  "version": "1.0.0",
+  "author": {
+    "name": "jdog219",
+    "url": "https://github.com/jdog219"
+  },
+  "homepage": "https://github.com/jdog219/tutor",
+  "repository": "https://github.com/jdog219/tutor",
+  "license": "MIT",
+  "keywords": ["educacion", "tutor", "aprendizaje", "estudio", "repaso-espaciado", "espanol"]
+}
