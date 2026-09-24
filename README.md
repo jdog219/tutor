@@ -161,6 +161,15 @@ repositorio remoto, que sea **privado**. Si estudias con material confidencial (
 ejemplo), díselo al tutor en la bienvenida: escribirá los archivos con ejemplos ficticios y hablará
 de lo real solo en el chat.
 
+## Contribuir
+
+Las mejoras son bienvenidas. Antes de proponer un cambio, comprueba que la estructura sigue siendo
+válida:
+
+```bash
+python3 scripts/validar.py
+```
+
 ## Licencia
 
 [MIT](LICENSE).
