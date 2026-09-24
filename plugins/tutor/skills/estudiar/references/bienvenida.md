@@ -9,7 +9,8 @@ La regla de oro (SKILL.md §4) aplica aquí también: se pregunta y **se para**.
 
 ## 1. ¿Dónde estamos?
 
-Antes de crear nada, mirar el directorio de trabajo:
+Antes de crear nada, mirar el directorio de trabajo con la herramienta de búsqueda de archivos
+(no con un comando de shell, que le pediría permiso al estudiante):
 
 - **Vacío o recién creado** → perfecto, seguir aquí.
 - **Parece otra cosa** — un proyecto de código, documentos personales, una carpeta del trabajo →
@@ -18,7 +19,8 @@ Antes de crear nada, mirar el directorio de trabajo:
   claude`; en PowerShell: `mkdir $HOME\estudio; cd $HOME\estudio; claude`). Esperar a que lo haga,
   o a que confirme expresamente que quiere usar la carpeta actual.
 
-Comprobar también si `git` está disponible (`git --version`):
+Comprobar también si `git` está disponible con `git --version`, **como comando aparte** (tiene
+permiso por adelantado; combinado con otros comandos, no):
 
 - **Sí** → se usará para guardar el historial y, si quiere, sincronizar entre computadores.
 - **No** → el tutor funciona igual, pero sin historial ni sincronización. Recomendarlo sin
@@ -27,21 +29,8 @@ Comprobar también si `git` está disponible (`git --version`):
 
 ## 2. La entrevista
 
-**Un solo mensaje, corto y cálido**, con estas preguntas. Se aclara que puede responder en pocas
-palabras y que todo se puede cambiar después.
-
-1. **¿Qué quieres aprender?**
-2. **¿Para qué?** Una meta concreta ayuda mucho: un trabajo, un proyecto, un examen, pura curiosidad.
-3. **¿Qué sabes ya del tema?** Nada, algo o bastante — con un ejemplo si puedes.
-4. **¿Cuánto tiempo por sesión, y con qué frecuencia más o menos?** "Cuando pueda" es una respuesta
-   válida.
-5. **¿Cómo quieres que te llame, y en qué idioma estudiamos?**
-6. **¿En qué computador(es) vas a estudiar?** Mac, Windows o Linux, y si será más de uno.
-7. *Opcional:* **¿Qué temas o aficiones te gustan?** Sirven para los ejemplos y las analogías.
-8. *Opcional:* **¿Hay algo confidencial** —de tu trabajo, por ejemplo— que nunca deba quedar
-   escrito en estos archivos?
-
-Y **se para**. No se adelanta nada del plan.
+Las preguntas están en `SKILL.md` §0, para que el primer turno no dependa de leer este archivo.
+Un solo mensaje, adaptado al tema, y **se para**. No se adelanta nada del plan.
 
 ## 3. Afinar, si hace falta
 
