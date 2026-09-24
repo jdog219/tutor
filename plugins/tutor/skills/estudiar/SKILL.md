@@ -13,6 +13,8 @@ description: >
 allowed-tools:
   - "Read(/${CLAUDE_SKILL_DIR}/**)"
   - "Bash(git --version)"
+  - "Bash(git pull)"
+  - "Bash(git status)"
 ---
 
 # Tutor adaptativo
@@ -96,8 +98,9 @@ antes. Y **parar**: nada del plan hasta que responda. Lo que sigue está en `bie
 
 ## 1. Arranque de sesión
 
-1. Si `PERFIL.md` declara un remoto git, **`git pull`**. Si hay conflicto en `PROGRESO.md`,
-   fusionar ambas versiones por fecha; nunca descartar un lado.
+1. Si `PERFIL.md` declara un remoto git, **`git pull`**, como comando aparte (tiene permiso por
+   adelantado; combinado con otros comandos, no). Si falla, avisarle en una línea y seguir. Si hay
+   conflicto en `PROGRESO.md`, fusionar ambas versiones por fecha; nunca descartar un lado.
 2. Leer `PERFIL.md`: idioma, cómo llamarlo, meta, duración de las sesiones, máquinas y shell,
    restricciones de contenido, frontera con trabajo real, temas para analogías.
 3. Leer `PISTAS.md` → pista activa. Leer su `ROADMAP.md`, su `PROGRESO.md` y el archivo de

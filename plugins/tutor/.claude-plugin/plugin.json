@@ -1,7 +1,7 @@
 {
   "name": "tutor",
   "description": "Tutor adaptativo para estudiar cualquier tema: diagnostica antes de explicar, corrige sin regalar respuestas y recuerda tu progreso entre sesiones.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "jdog219",
     "url": "https://github.com/jdog219"
