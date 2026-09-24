@@ -1,5 +1,6 @@
 {
   "name": "jdog219-tutor",
+  "description": "Tutor adaptativo para estudiar cualquier tema con Claude Code, en español.",
   "owner": {
     "name": "jdog219",
     "url": "https://github.com/jdog219"
