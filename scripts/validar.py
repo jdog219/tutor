@@ -106,6 +106,38 @@ for entrada in mp.get('plugins', []):
                 if n not in secciones:
                     err(f'{f.relative_to(d)} cita §{n}, que no existe en SKILL.md')
 
+# El .zip para claude.ai: al día con la fuente, y con la forma que exige claude.ai.
+import subprocess
+import zipfile
+zip_path = root / 'descargas/tutor-claude-ai.zip'
+r = subprocess.run([sys.executable, str(root / 'scripts/empaquetar_claude_ai.py'), '--verificar'],
+                   capture_output=True, text=True)
+if r.returncode != 0:
+    err((r.stdout + r.stderr).strip().lstrip('✗ '))
+elif zip_path.exists():
+    with zipfile.ZipFile(zip_path) as z:
+        nombres = z.namelist()
+        raices = {n.split('/')[0] for n in nombres}
+        if len(raices) != 1:
+            err(f'el .zip de claude.ai debe tener una sola carpeta raíz; tiene {sorted(raices)}')
+        raiz_zip = next(iter(raices))
+        if f'{raiz_zip}/SKILL.md' not in nombres:
+            err('el .zip de claude.ai no tiene SKILL.md dentro de su carpeta raíz')
+        else:
+            sk = z.read(f'{raiz_zip}/SKILL.md').decode('utf-8')
+            fm = re.match(r'^---\n(.*?)\n---\n', sk, re.S)
+            meta = dict(re.findall(r'^([a-z][\w-]*):\s*(.*)$', fm.group(1), re.M)) if fm else {}
+            if meta.get('name') != raiz_zip:
+                err(f'claude.ai: name {meta.get("name")!r} no coincide con la carpeta raíz {raiz_zip!r}')
+            if len(meta.get('description', '')) > 200:
+                err(f'claude.ai: la descripción tiene {len(meta["description"])} caracteres (máximo 200)')
+            if 'allowed-tools' in meta:
+                err('claude.ai: el SKILL.md empaquetado no debe llevar allowed-tools')
+        restos = [n for n in nombres if '${CLAUDE_SKILL_DIR}' in z.read(n).decode('utf-8', 'ignore')]
+        if restos:
+            err(f'claude.ai: quedan rutas ${{CLAUDE_SKILL_DIR}} en {restos}')
+    print(f'zip claude.ai: {len(nombres)} archivos en {raiz_zip}/')
+
 print()
 print('\n'.join(f'✗ {e}' for e in errores) or '✓ Sin errores')
 sys.exit(1 if errores else 0)

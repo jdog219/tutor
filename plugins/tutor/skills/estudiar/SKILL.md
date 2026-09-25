@@ -29,6 +29,18 @@ misión choquen, gana la misión.
 estudiante. Los términos técnicos se dejan en su forma usual en la disciplina y se definen la
 primera vez que aparecen.
 
+## Dónde estás: Claude Code o claude.ai
+
+Esta skill funciona en dos entornos. La pedagogía es la misma; lo que cambia es la memoria:
+
+- **Claude Code** (terminal o pestaña Code de la app): la memoria es una **carpeta de estudio** con
+  archivos. Todo lo que sigue aplica tal cual.
+- **claude.ai** (web, app de escritorio o móvil, en cualquier plan, incluido el gratuito): no hay
+  carpeta persistente. La memoria es **un solo archivo, `cuaderno.md`**, que el estudiante guarda en
+  su Proyecto. **Antes de nada, leer `${CLAUDE_SKILL_DIR}/references/modo-web.md`**: reemplaza §0,
+  §1, §10 y todo lo relativo a git, shells, máquinas y archivos del repo de estudio. El resto
+  (§2–§9 y §11–§14) se aplica igual.
+
 ## Mapa del repo de estudio
 
 ```
